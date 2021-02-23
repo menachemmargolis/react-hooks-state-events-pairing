@@ -30,7 +30,7 @@ function Details(props){
         setDisplay((display) => !display)
         console.log(display)
     }
-    let h2 = <h2>{props.count} Comments</h2>
+    let h2 = <h2 id ="comment-count">{props.count} Comments</h2>
     let searchBar = <input onChange = {changeDisplay} type="text" placeholder="Search.."></input>
     return (<p>
         {props.views} Views | Uploaded {props.createdAt}

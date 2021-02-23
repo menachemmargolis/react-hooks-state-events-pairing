@@ -2,13 +2,22 @@ import React, { useState } from "react"
 import Likes from "./Likes"
 
 function Comments(props){
-    let upNum = 0
+    
+   function removeComment(e){
+     let cc = document.getElementsByClassName('comment')
+     console.log(cc.length)
+     e.target.closest('div').remove()
+     document.getElementById('comment-count').innerHTML = `${cc.length} comment` 
+     
+   }
+
     return (
-        <React.Fragment>
+        <div class ="comment">
             <h3>{props.user}</h3>
             <p>{props.comments}</p>
+            <button onClick ={removeComment} >Delete!</button>
             <Likes  upvotes = {props.upvotes} downvotes = {props.downvotes} />
-        </React.Fragment>
+        </div>
     )
 }
 

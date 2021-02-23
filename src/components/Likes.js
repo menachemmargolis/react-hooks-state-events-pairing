@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 function Likes(props){
-    let upNum = parseInt(props.upvotes)
-    let downNum = parseInt(props.downvotes)
-    const [like, setLike] = useState(upNum)
-    const [disLike, setDisLike] = useState(downNum)
+
+    const [like, setLike] = useState(0)
+    const [disLike, setDisLike] = useState(0)
 
     function ChangeLikes(e){
        setLike(like + 1)
